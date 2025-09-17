@@ -5,19 +5,18 @@
    
     <style>
 
-        #circle {
+        #square {
             width: 150px;
             height: 150px;
-            border-radius: 50%;
             background-color: goldenrod;
             text-align: center;
             padding-top: 60px;
         }
 
-        /* Add CSS code here */ 
-        #square {
+        #circle {
             width: 150px;
             height: 150px;
+            border-radius: 50%;
             background-color: goldenrod;
             text-align: center;
             padding-top: 60px;
@@ -31,13 +30,29 @@
         </div>
         
         <script>
-           // add code here
-           function mOver(obj){
-            obj.id = "square";
-           }
-           function mOut(obj){
-            obj.id = "circle";
-           }
+            function mOver(obj) {
+                // obj.getAttributeNode("id").value = "square";
+                obj.id = "square";
+                obj.style.paddingTop = "20px";
+            }
+            
+            function mOut(obj) {
+                // obj.getAttributeNode("id").value = "circle";
+                obj.id = "circle";
+                obj.style.paddingTop = "60px";
+            }
+
+            function mOver2(obj) {
+                // obj.getAttributeNode("id").value = "square";
+                obj.id = "square";
+                obj.style.borderRadius = "";
+            }
+            
+            function mOut2(obj) {
+                // obj.getAttributeNode("id").value = "circle";
+                obj.id = "circle";
+                obj.style.borderRadius = "50%";
+            }
         </script>
                 
 </body>
